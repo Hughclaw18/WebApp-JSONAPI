@@ -1,0 +1,43 @@
+// public/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notes App with JSON Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Notes App with JSON Viewer</h1>
+        
+        <div class="sections-container">
+            <div class="notes-section">
+                <div class="new-note">
+                    <h2>Create New Note</h2>
+                    <input type="text" id="noteTitle" placeholder="Note Title" required>
+                    <textarea id="noteContent" placeholder="Note Content" required></textarea>
+                    <button onclick="createNote()">Save Note</button>
+                </div>
+
+                <div class="notes-list">
+                    <h2>Your Notes</h2>
+                    <div id="notesList"></div>
+                </div>
+            </div>
+
+            <div class="json-section">
+                <h2>JSON Data</h2>
+                <div class="json-viewer">
+                    <textarea id="jsonEditor" spellcheck="false"></textarea>
+                    <div class="json-controls">
+                        <button onclick="updateJSON()">Update JSON</button>
+                        <button onclick="formatJSON()">Format JSON</button>
+                        <button onclick="refreshJSON()">Refresh</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
